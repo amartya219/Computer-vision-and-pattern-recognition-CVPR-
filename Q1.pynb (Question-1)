@@ -1,0 +1,11 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.cm as cm
+
+n = 60
+angle = np.linspace(0,10*2*np.pi, n)
+radius = np.linspace(.45,.95,n)
+q = radius * np.sin(angle)
+p = radius * np.cos(angle)
+plt.scatter(p,q,c = angle, cmap = cm.hsv)
+plt.show()
